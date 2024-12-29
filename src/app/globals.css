@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to enforce body styles */
+body {
+  @apply bg-gray-100; /* Tailwind utility class */
+  font-family: 'Arial', sans-serif;
+}
