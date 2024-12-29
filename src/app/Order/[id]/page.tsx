@@ -82,7 +82,7 @@ export default function ProductDetail() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900">Product not found</h1>
-          <p className="mt-2 text-gray-600">The product you're looking for doesn't exist.</p>
+          <p className="mt-2 text-gray-600">The product you are looking for does not exist.</p>
           <Link href="/Order">
             <Button className="mt-4">
               Back to Products

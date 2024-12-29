@@ -1,15 +1,13 @@
 "use client"
 
 import Image from 'next/image'
-import Link from 'next/link'
+
 import { MinusIcon, PlusIcon, TrashIcon } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { useRouter } from 'next/navigation'
-import Navbar from "@/components/Navbar"
-import Subscribe from "@/components/Subscribe"
-import Footer from "@/components/Footer"
+
 
 // Mock cart data
 const cartItems = [
