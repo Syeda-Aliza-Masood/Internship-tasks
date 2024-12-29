@@ -1,39 +1,36 @@
-
 const SendQuote = () => {
-    return (
-      <div className="w-[1180px] h-[420px] relative rounded-md mx-auto">
-        {/* Left Section - Background Image */}
-        <div
-          className="w-full h-full bg-cover bg-center rounded-md"
-          style={{ backgroundImage: 'url("/22.png")' }} // Ensure the image is placed in the `/public` folder
-        >
-          {/* Text Section on Top of Background */}
-          <div className="absolute top-1/4 left-10 text-white space-y-4">
-            {/* Heading */}
-            <h1 className="text-3xl font-bold">An Easy Way to Send</h1>
-            {/* Subheading */}
-            <h1 className="text-3xl font-bold">Requests to All Suppliers</h1>
-            {/* Lorem Ipsum Text */}
-            <p className="text-sm mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-              Vestibulum a diam ante. Sed malesuada turpis eget ligula hendrerit, <br />
-              non volutpat nulla vehicula.
-            </p>
-          </div>
+  return (
+    <div
+      className="w-[1180px] h-[420px] relative rounded-md mx-auto bg-cover bg-center"
+      style={{ backgroundImage: 'url("/22.png")' }} // Ensure the image is placed in the `/public` folder
+    >
+      {/* Overlay Container */}
+      <div className="absolute inset-0  flex items-center justify-between p-10">
+        {/* Left Section - Text */}
+        <div className="text-white space-y-4 max-w-lg">
+          <h1 className="text-3xl font-bold leading-snug">
+            An Easy Way to Send Requests to All Suppliers
+          </h1>
+          <p className="text-sm mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+            Vestibulum a diam ante. Sed malesuada turpis eget ligula hendrerit, <br />
+            non volutpat nulla vehicula.
+          </p>
         </div>
-  
-        {/* Right Section - White Box with Space from Right */}
-        <div className="absolute top-1/2 right-3 transform -translate-y-1/2 w-full sm:w-3/4 md:w-2/5 lg:w-2/5 bg-white p-4 rounded-md shadow-lg">
-          {/* Heading */}
-          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 text-center sm:text-left">
+
+        {/* Right Section - White Form Box */}
+        <div className="bg-white p-6 rounded-md shadow-lg max-w-md w-full">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
             Send Quote to Suppliers
           </h2>
-  
+
           {/* Form Fields */}
           <div className="space-y-4">
             {/* Item Input */}
             <div>
-              <label htmlFor="item" className="text-sm sm:text-base text-gray-700">What item do you need?</label>
+              <label htmlFor="item" className="text-sm text-gray-700">
+                What item do you need?
+              </label>
               <input
                 type="text"
                 id="item"
@@ -41,7 +38,7 @@ const SendQuote = () => {
                 className="w-full h-10 p-2 mt-2 border border-gray-300 rounded-md"
               />
             </div>
-  
+
             {/* Details Input */}
             <div>
               <textarea
@@ -50,10 +47,10 @@ const SendQuote = () => {
                 className="w-full h-20 p-2 mt-2 border border-gray-300 rounded-md"
               ></textarea>
             </div>
-  
+
             {/* Quantity and Units */}
-            <div className="flex flex-wrap sm:flex-nowrap space-x-0 sm:space-x-4 items-center">
-              <div className="w-full sm:w-1/2">
+            <div className="flex space-x-4">
+              <div className="flex-1">
                 <input
                   type="number"
                   id="quantity"
@@ -61,7 +58,7 @@ const SendQuote = () => {
                   className="w-full h-10 p-2 mt-2 border border-gray-300 rounded-md"
                 />
               </div>
-              <div className="w-full sm:w-1/2">
+              <div className="flex-1">
                 <select
                   id="units"
                   className="w-full h-10 p-2 mt-2 border border-gray-300 rounded-md"
@@ -72,7 +69,7 @@ const SendQuote = () => {
                 </select>
               </div>
             </div>
-  
+
             {/* Send Inquiry Button */}
             <button className="w-full py-2 mt-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600">
               Send Inquiry
@@ -80,8 +77,8 @@ const SendQuote = () => {
           </div>
         </div>
       </div>
-    );
-  };
-  
-  export default SendQuote;
-  
+    </div>
+  );
+};
+
+export default SendQuote;

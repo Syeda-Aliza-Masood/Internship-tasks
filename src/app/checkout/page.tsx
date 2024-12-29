@@ -111,7 +111,7 @@ export default function CheckoutPage() {
                       <div className="flex items-center space-x-2 border rounded-lg p-4">
                         <RadioGroupItem value="card" id="card" />
                         <Label htmlFor="card" className="flex-1">Credit/Debit Card</Label>
-                        <Image src="/images/payment.jpg" alt="Card payments" width={100} height={20} />
+                        
                       </div>
                       <div className="flex items-center space-x-2 border rounded-lg p-4">
                         <RadioGroupItem value="paypal" id="paypal" />

@@ -106,7 +106,7 @@ export default function Navbar() {
                   {cartItemCount}
                 </span>
               )}
-              <Link href="/Mycart">My Cart</Link>
+              <Link href="/MyCart">My Cart</Link>
             </li>
           </ul>
         </div>
@@ -132,7 +132,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/Mycart" className="hover:text-blue-500" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/MyCart" className="hover:text-blue-500" onClick={() => setIsMenuOpen(false)}>
                 My Cart
               </Link>
             </li>

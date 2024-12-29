@@ -1,13 +1,14 @@
 "use client"
 
 import Image from 'next/image'
-
 import { MinusIcon, PlusIcon, TrashIcon } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { useRouter } from 'next/navigation'
-
+import Navbar from '@/components/Navbar'
+import Subscribe from '@/components/Subscribe'
+import Footer from '@/components/Footer'
 
 // Mock cart data
 const cartItems = [
@@ -20,7 +21,6 @@ const cartItems = [
     size: 5.5 ,
     color: "Red"
   },
-  
 ]
 
 const savedItems = [
@@ -61,9 +61,11 @@ export default function CartPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gray-50 ">
+      <Navbar /> {/* Import and render Navbar */}
+      
       <div className="container mx-auto px-4">
-        <h1 className="text-2xl font-semibold mb-6">My cart ({cartItems.length})</h1>
+        <h1 className="text-2xl font-semibold mb-6">My Cart ({cartItems.length})</h1>
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Cart Items */}
@@ -175,13 +177,13 @@ export default function CartPage() {
               <div className="mt-4 flex justify-center gap-2">
                 <Image src="/images/payment.jpg" alt="Visa" width={400} height={20} />
               </div>
-
-             
             </div>
           </div>
         </div>
       </div>
+
+      <Subscribe /> {/* Import and render Subscribe */}
+      <Footer /> {/* Import and render Footer */}
     </div>
   )
 }
-
