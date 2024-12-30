@@ -9,20 +9,22 @@ function Recommendation() {
       </h2>
 
       {/* Grid of Boxes */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {/* Recommended Item Boxes */}
         {Array.from({ length: 10 }, (_, index) => (
           <div
             key={index}
-            className="w-full h-[310px] bg-white rounded-lg shadow-md flex items-center justify-center transform hover:scale-105 transition-transform duration-300"
+            className="w-full h-48 sm:h-60 md:h-72 lg:h-80 bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300"
           >
-            <Image
-              src={`/${23 + index}.png`} // Ensure image files are placed in the /public folder
-              alt={`Recommended Item ${index + 1}`}
-              className="w-full h-full object-cover rounded-lg"
-              width={310}  // Optional: specify width and height for Image component optimization
-              height={310} // Optional: specify width and height for Image component optimization
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={`/${23 + index}.png`} // Ensure image files are placed in the /public folder
+                alt={`Recommended Item ${index + 1}`}
+                className="object-cover"
+                layout="fill" // The image will now cover the container completely
+                objectFit="cover" // Ensures the image fits correctly
+              />
+            </div>
           </div>
         ))}
       </div>

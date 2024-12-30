@@ -1,13 +1,12 @@
 const SendQuote = () => {
   return (
     <div
-      className="w-[1180px] h-[420px] relative rounded-md mx-auto bg-cover bg-center"
-      style={{ backgroundImage: 'url("/22.png")' }} // Ensure the image is placed in the `/public` folder
+      className="w-[1180px] h-[420px] relative rounded-md mx-auto bg-custom-image-3 sm:bg-contain sm:block hidden"
     >
       {/* Overlay Container */}
-      <div className="absolute inset-0  flex items-center justify-between p-10">
+      <div className="absolute inset-0 flex items-center justify-between p-10 flex-col sm:flex-row">
         {/* Left Section - Text */}
-        <div className="text-white space-y-4 max-w-lg">
+        <div className="text-white space-y-4 max-w-lg text-center sm:text-left">
           <h1 className="text-3xl font-bold leading-snug">
             An Easy Way to Send Requests to All Suppliers
           </h1>
@@ -18,7 +17,7 @@ const SendQuote = () => {
           </p>
         </div>
 
-        {/* Right Section - White Form Box */}
+        {/* Right Section - White Form Box (Hidden on mobile) */}
         <div className="bg-white p-6 rounded-md shadow-lg max-w-md w-full">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
             Send Quote to Suppliers
